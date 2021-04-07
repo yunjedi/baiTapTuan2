@@ -8,7 +8,7 @@
     tools:context=".Login">
 
     <ImageButton
-        android:id="@+id/imageView"
+        android:id="@+id/backLogin"
         android:layout_width="38dp"
         android:layout_height="38dp"
         android:layout_marginStart="28dp"
@@ -57,7 +57,7 @@
         android:textSize="36.41sp"
 android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/backLogin" />
 
     <TextView
         android:id="@+id/textView9"
@@ -165,7 +165,7 @@ android:textColor="#5B5B5E"
             />
 
         <TextView
-            android:id="@+id/textView121"
+            android:id="@+id/tvSignInSignUp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
 

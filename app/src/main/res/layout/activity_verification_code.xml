@@ -8,7 +8,7 @@
     tools:context=".VerificationCode">
 
     <ImageButton
-        android:id="@+id/imageView"
+        android:id="@+id/backLogin"
         android:layout_width="38dp"
         android:layout_height="38dp"
         android:layout_marginStart="28dp"
@@ -32,7 +32,7 @@
         android:textColor="@color/black"
         android:textSize="36.41sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/backLogin"
         tools:ignore="MissingConstraints" />
 
 

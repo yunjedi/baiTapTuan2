@@ -134,19 +134,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sofia_pro_medium"
-            android:text="Don’t have an account?"
+            android:text="Already have an account?"
             android:textColor="#5B5B5E"
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/textView121"
+            android:id="@+id/tvSignInSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Sign Up"
             android:fontFamily="@font/sofia_pro_medium"
+            android:text="Login"
             android:textColor="#FD8E70"
-            android:textSize="14sp"
-            />
+            android:textSize="14sp" />
     </TableRow>
 
     <ImageView

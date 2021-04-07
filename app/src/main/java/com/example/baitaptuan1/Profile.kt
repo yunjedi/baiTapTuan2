@@ -59,6 +59,11 @@ class Profile : Login() {
                 mAlertDialog.dismiss()
             }
         }
+        backProfile.setOnClickListener{
+
+            val intent=Intent(this,Login::class.java)
+            startActivity(intent)
+        }
 
 
     }
