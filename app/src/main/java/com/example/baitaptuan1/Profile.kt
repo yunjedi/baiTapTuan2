@@ -34,7 +34,7 @@ class Profile : Login() {
             //AlertDialogBuilder
             val mBuilder = AlertDialog.Builder(this)
                 .setView(mDialogView)
-                .setTitle("Login Form")
+                .setTitle("Edit Profile")
             //show dialog
             val  mAlertDialog = mBuilder.show()
             //login button click of custom layout
