@@ -1,15 +1,17 @@
 package com.example.baitaptuan1
 
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.TextView
-import android.widget.Toast
+import android.view.LayoutInflater
+import android.widget.*
+import kotlinx.android.synthetic.main.activity_profile.*
+import kotlinx.android.synthetic.main.customdialog.view.*
+
 
 class Profile : Login() {
 
@@ -18,35 +20,44 @@ class Profile : Login() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        val tvName = findViewById<TextView>(R.id.txtName);
-        val etName = findViewById<EditText>(R.id.edName);
-        var etEmail = findViewById<EditText>(R.id.etEmailLogin);
-        val etPhone = findViewById<EditText>(R.id.etPhone)
-        val btnBack = findViewById<ImageButton>(R.id.btnBack);
+//        val tveditprofile = findViewById<TextView>(R.id.tveditprofile)
+//        val txtName = findViewById<TextView>(R.id.txtName)
+//        val tvcontentfullname = findViewById<TextView>(R.id.tvcontentfullname)
+//        val tvcontentemail = findViewById<TextView>(R.id.tvcontentemail)
+//        val tvContentPhoneNumber = findViewById<TextView>(R.id.tvContentPhoneNumber)
+//        val dialogLoginBtn=findViewById<Button>(R.id.dialogLoginBtn)
 
-        var intent = intent
-        etEmail.setText(intent.getStringExtra("Email"))
-        etName.setText("Eljad Eandax")
-        etPhone.setText("+1 (783) 0986 8786")
+        //button click to show dialog
+        tveditprofile.setOnClickListener {
+            //Inflate the dialog with custom view
+            val mDialogView = LayoutInflater.from(this).inflate(R.layout.customdialog, null)
+            //AlertDialogBuilder
+            val mBuilder = AlertDialog.Builder(this)
+                .setView(mDialogView)
+                .setTitle("Login Form")
+            //show dialog
+            val  mAlertDialog = mBuilder.show()
+            //login button click of custom layout
+            mDialogView.dialogLoginBtn.setOnClickListener {
+                //dismiss dialog
+                mAlertDialog.dismiss()
+                //get text from EditTexts of custom layout
+                val name = mDialogView.dialogNameEt.text.toString()
+                val email = mDialogView.dialogEmailEt.text.toString()
+                val password = mDialogView.dialogPasswEt.text.toString()
+                //set the input text in TextView
+             //   mainInfoTv.setText("Name:"+ name +"\nEmail: "+ email +"\nPassword: "+ password)
+                txtName.setText(name)
+                tvcontentfullname.setText(name)
+                tvcontentemail.setText(email)
+                tvContentPhoneNumber.setText(password)
 
-        etName.addTextChangedListener(object : TextWatcher {
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                // Fires right as the text is being changed (even supplies the range of text)
             }
-
-            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-                // Fires right before text is changing
+            //cancel button click of custom layout
+            mDialogView.dialogCancelBtn.setOnClickListener {
+                //dismiss dialog
+                mAlertDialog.dismiss()
             }
-
-            override fun afterTextChanged(s: Editable) {
-                // Fires right after the text has changed
-                tvName.setText(s.toString())
-            }
-
-        })
-        btnBack.setOnClickListener{
-           val intentBack = Intent(this,Login::class.java)
-            startActivity(intentBack)
         }
 
 
