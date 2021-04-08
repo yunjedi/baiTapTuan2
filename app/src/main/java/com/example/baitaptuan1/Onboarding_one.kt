@@ -13,7 +13,7 @@ class Onboarding_one : AppCompatActivity() {
 
         val imgNextOnboaringOne=findViewById<ImageView>(R.id.imgNextOnboaringOne);
         imgNextOnboaringOne.setOnClickListener{
-            val intent = Intent(this, Welcome::class.java)
+            val intent = Intent(this, onboaring_two::class.java)
             startActivity(intent)
         }
 

@@ -9,13 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Baitaptuan1">
-        <activity android:name=".Profile"></activity>
+        <activity android:name=".onboaring_three"></activity>
+        <activity android:name=".onboaring_two" />
+        <activity android:name=".Profile" />
         <activity android:name=".VerificationCode" />
         <activity android:name=".Login" />
         <activity android:name=".SignUp" />
         <activity android:name=".Onboarding_one" />
         <activity android:name=".Welcome" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".splash"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
