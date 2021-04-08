@@ -33,7 +33,7 @@ open class Login : AppCompatActivity() {
                 etPasswordSignUp.setError("Enter your password, Please!!!");
             }
 
-
+///
             if (!isEmpty(email) && !isEmpty(password)) {
                 if (email.equals("ronaldo@gmail.com") && password.equals("123456")) {
                     Toast.makeText(this, "Login complete", Toast.LENGTH_LONG).show()
