@@ -7,6 +7,10 @@ import android.text.TextUtils.isEmpty
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_login.btLogin
+import kotlinx.android.synthetic.main.activity_login.etPasswordSignUp
+import kotlinx.android.synthetic.main.activity_login.tvSignInSignUp
+import kotlinx.android.synthetic.main.activity_sign_up.*
 
 open class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,20 +21,20 @@ open class Login : AppCompatActivity() {
 //        val btLogin = findViewById<ImageButton>(R.id.btLogin)
 
         btLogin.setOnClickListener {
-            var email: String = etEmailSignUp.text.toString()
-            var password: String = etEmailSignUp.text.toString()
+            var email: String = etEmailignUp.text.toString()
+            var password: String = etPasswordSignUp.text.toString()
 
 
 
             if (isEmpty(email)) {
-                etEmailSignUp.setError("Enter your email, Please!!!");
+                etEmailignUp.setError("Enter your email, Please!!!");
             }
             if (isEmpty(password)) {
-                etEmailSignUp.setError("Enter your password, Please!!!");
+                etPasswordSignUp.setError("Enter your password, Please!!!");
             }
 
 
-            if(!isEmpty(email) && !isEmpty(password)) {
+            if (!isEmpty(email) && !isEmpty(password)) {
                 if (email.equals("ronaldo@gmail.com") && password.equals("123456")) {
                     Toast.makeText(this, "Login complete", Toast.LENGTH_LONG).show()
                     val intent = Intent(this, Profile::class.java)
@@ -44,8 +48,8 @@ open class Login : AppCompatActivity() {
                     mAlertDialog.setPositiveButton("Try again") { dialog, id ->
                         //perform some tasks here
                         //   Toast.makeText(this@MainActivity, "Yes", Toast.LENGTH_SHORT).show()
-                        etEmailSignUp.setText("")
-                        etEmailSignUp.setText("")
+                        etEmailignUp.setText("")
+                        etPasswordSignUp.setText("")
 
 
                     }
@@ -53,8 +57,8 @@ open class Login : AppCompatActivity() {
                         //perform som tasks here
                         //     Toast.makeText(this@MainActivity, "No", Toast.LENGTH_SHORT).show()
                         val intent = Intent(this, SignUp::class.java)
-                        intent.putExtra( "Email", email)
-                        intent.putExtra( "password", password)
+                        intent.putExtra("Email", email)
+                        intent.putExtra("password", password)
 
                         startActivity(intent)
 
@@ -62,7 +66,6 @@ open class Login : AppCompatActivity() {
                     mAlertDialog.show()
                 }
                 //   Toast.makeText(this, "dang nhap that bai", Toast.LENGTH_LONG).show()
-
             }
         }
 

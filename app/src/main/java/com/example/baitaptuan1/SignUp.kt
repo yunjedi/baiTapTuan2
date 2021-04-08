@@ -14,7 +14,7 @@ class SignUp : AppCompatActivity() {
         bundle?.let{
             val email=bundle.getString("Email")
             val password=bundle.getString("password")
-            etEmailSignUp.setText(email);
+            etPasswordSignUp.setText(email);
             etPasswordSignup.setText(password)
         }
 
