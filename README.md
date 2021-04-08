@@ -1,3 +1,6 @@
+![baiTapTuan2](https://user-images.githubusercontent.com/75669379/114031302-7121d300-98a5-11eb-9544-8fcb082fc36a.gif)
+
+
 THỬ THÁCH TUẦN 2
 
 1. Tạo flow app sau
